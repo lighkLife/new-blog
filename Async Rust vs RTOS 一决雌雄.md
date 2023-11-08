@@ -1,3 +1,6 @@
+原文：https://tweedegolf.nl/en/blog/65/async-rust-vs-rtos-showdown
+
+## 概述
 这篇文章主要将 Embassy/Rust 和 FreeRTOS/C 性能和资源占用对比，硬件环境为 STM32F446 微控制器，主频180Mhz。最后还追加了 RTIC 的对比数据；
 
 ## Rust异步
