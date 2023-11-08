@@ -1,4 +1,5 @@
 # Embassy 执行器
+原文： https://embassy.dev/book/dev/runtime.html
 
 Embassy 执行器（executor）是一个为嵌入式设计的异步/等待（async/await）执行器，支持中断和定时器。
 
