@@ -1,9 +1,9 @@
 原文：https://tweedegolf.nl/en/blog/65/async-rust-vs-rtos-showdown
 
-## 概述
+## 0x0.概述
 这篇文章主要将 Embassy/Rust 和 FreeRTOS/C 性能和资源占用对比，硬件环境为 STM32F446 微控制器，主频180Mhz。最后还追加了 RTIC 的对比数据；
 
-## Rust异步
+## 0x1.Rust异步
 
 Rust 中的的异步函数只是一个函数语法糖，返回结果为 Future 结构体。
 
@@ -22,7 +22,7 @@ Rust 的 Futures 是惰性的，它只在被轮询（Poll）时执行。为了�
 
 等待资源就绪时，Rust 使用 Waker 来通知执行器可以调用 Poll 了。这个 Waker 可以被 Futures 自己调用（感觉这样就等于一直轮询），也可以由 Futures 等待的那个进程/线程调用（也就是资源就绪时，对方线程来调用我们的Waker进行通知）。总而言之，执行器只有但Waker被触发时，才调用 `Poll`函数。
 
-## Embbassy
+## 0x2.Embbassy
 
 Embbassy 是 Rust 实现的现代嵌入式框架，实现了啊RUST 异步执行器、硬件抽象层（HAL）、网络、蓝牙、Lora、USB、Bootloader 和 DFU（Device Firmware Upgrade Mode）。
 
@@ -33,11 +33,11 @@ Embbassy 使用了Rust这种异步机制，但额外增加一些限制：
 - 需要`nightly`版本的编译器。需要使用预览特性`type_alias_impl_trait`。
   
 
-## RTOS
+## 0x3.RTOS
 
 RTOS 是实时操作系统。实时操作系统将所有不同的事情都放在独立的线程中。切换线程时，需要保存、恢复处理器上下文。这种设计适合实现抢占式线程模型。
 
-## 测试程序
+## 0x4.测试程序
 
 尽可能的模拟出如下的现实场景：
 
@@ -73,7 +73,7 @@ RTOS 是实时操作系统。实时操作系统将所有不同的事情都放在
   - 将消费到的字符串发送到串口
     
 
-## 需要测量的指标
+## 0x5.需要测量的指标
 
 **性能**
 
@@ -112,7 +112,7 @@ RTOS 是实时操作系统。实时操作系统将所有不同的事情都放在
 **编程的简单程度**
   
 
-## Embbassy/Rust 与 RTOS/C 测试结果
+## 0x6.Embbassy/Rust 与 RTOS/C 测试结果
 
 | Test | C   | Rust | Difference | Difference % |
 | --- | --- | --- | --- | --- |
@@ -127,7 +127,7 @@ RTOS 是实时操作系统。实时操作系统将所有不同的事情都放在
 
 无论从均值，还是方差来看，Embassy/Rust 在各个方面都胜出。
 
-## 附加 RTIC 测试结果
+## 0x7.附加 RTIC 测试结果
 
 rtic 是实时中断驱动并发框架（Real-Time Interrupt-driven Concurrency），但目前仅限于 `ARM Cortex-M`微处理器。
 
@@ -144,7 +144,7 @@ rtic 是实时中断驱动并发框架（Real-Time Interrupt-driven Concurrency�
 
 可以看到 RTIC 的均值表现更佳，但方差不及 Embassy，也就是说Embassy表现更加稳定。
 
-## 总结
+## 0x8.总结
 
 Embbassy 使用 RUST 的异步语法，自己实现了异步运行时，可以很方便的在嵌入式中使用异步操作。在多任务并发执行、任务间共享数据、中断响应的场景下，Embbassy 性能要比RTOS/C 更优秀，占用资源也更少。
 
