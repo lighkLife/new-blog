@@ -87,3 +87,11 @@ Rust Async 使用 Poll 机制，整个过程可划分为三个阶段：
 -  **leaf futures** ：代表访问一个资源（如socket）
   
 - **Non-leaf-futures**： 用户使用 async 标记的代码块
+
+**Rust 标准库干了哪些活？**
+
+1. 定义 Future 接口，标识一个未来完成的操作。
+  
+2. 使用 async、await 生成一个可以挂起、恢复的任务。
+  
+3. Waker 接口，可以唤醒挂起的任务。
