@@ -5,4 +5,5 @@
 
 ## 笔记
 [Async Rust vs RTOS 一决雌雄](https://github.com/lighkLife/new-blog/blob/main/Async%20Rust%20vs%20RTOS%20%E4%B8%80%E5%86%B3%E9%9B%8C%E9%9B%84.md)
+[](https://github.com/lighkLife/new-blog/blob/main/200%E8%A1%8CRust%E4%BB%A3%E7%A0%81%E8%A7%A3%E9%87%8AFutures.md)
 
