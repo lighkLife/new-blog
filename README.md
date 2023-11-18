@@ -13,6 +13,8 @@
 | --- | --- | --- | --- |
 | 1   | 学习 Async Rust vs RTOS showndown | 已完成 |  [Async Rust vs RTOS 一决雌雄](https://github.com/lighkLife/new-blog/blob/main/Async%20Rust%20vs%20RTOS%20%E4%B8%80%E5%86%B3%E9%9B%8C%E9%9B%84.md)|
 | 2   | 异步驱动实现 | 进行中 | |
-| 3   | 驱动移植 |  | |
+
+异步驱动实现详情：
+
 
 
