@@ -12,7 +12,9 @@
 | 序号  | 任务  | 状态  | 结果  |
 | --- | --- | --- | --- |
 | 1   | 学习 Async Rust vs RTOS showndown | 已完成 |  [Async Rust vs RTOS 一决雌雄](https://github.com/lighkLife/new-blog/blob/main/Async%20Rust%20vs%20RTOS%20%E4%B8%80%E5%86%B3%E9%9B%8C%E9%9B%84.md)|
-| 2   | 异步驱动实现 | 进行中 | |
+| 2   | embassy 中文在线文档翻译 | 已完成 | https://github.com/lighkLife/embassy-cn |
+| 3   | embassy 项目代码标注 | 进行中 | https://github.com/lighkLife/embassy-cn/issues/8 |
+| 4   | 异步驱动实现 | 进行中 | https://github.com/lighkLife/new-blog/issues/1 |
 
 异步驱动实现详情：
 将 emabssy 引入内核态，内核
