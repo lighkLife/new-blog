@@ -31,8 +31,8 @@
 
 遇到的问题：
 1. 进程、线程、协程之间如何协作与调度？
+   - https://excalidraw.com/#room=b9281fc2b314f8f2a9fd,SO4c-Sl_iEDEOgmEs-i9yw
 2. 内核态的协程完成任务之后，如何通知给用户态的协程？
-
-
-白板地址
-https://excalidraw.com/#room=b9281fc2b314f8f2a9fd,SO4c-Sl_iEDEOgmEs-i9yw
+   - 用户态中断
+   - 任务完成时修改任务状态（涉及地址空间转换），用户态的运行时遍历任务队列，找到存在 ready状态的任务去继续运行，如果没有，主动让出 CPU
+   - https://excalidraw.com/#room=b9281fc2b314f8f2a9fd,SO4c-Sl_iEDEOgmEs-i9yw
