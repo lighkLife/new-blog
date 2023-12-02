@@ -16,12 +16,23 @@
 | 3   | embassy 项目代码标注 | 进行中 | https://github.com/lighkLife/embassy-cn/issues/8 |
 | 4   | 异步驱动实现 | 进行中 | https://github.com/lighkLife/new-blog/issues/1 |
 
+## 第三周
 | 序号  | 任务  | 状态  | 结果  |
 | --- | --- | --- | --- |
 | 1   | 异步驱动实现 | 完成 | https://github.com/lighkLife/rCore-async/tree/ch9 |
 | 2   | embassy 项目代码标注 | 进行中 | https://github.com/lighkLife/embassy |
 
+
+## 第四周
+| 序号  | 任务  | 状态  | 结果  |
+| --- | --- | --- | --- |
+| 1   | 贡献调度器 | 实现中  | https://github.com/lighkLife/rCore-async/tree/ch9-async |
+| 2   | embassy 项目代码标注 | 完成 executor 模块代码注释 | https://github.com/lighkLife/embassy |
+
 遇到的问题：
-embassy 运行时应该在哪里启动？ 每个线程一个运行时？ 
-embassy 的任务没有返回值，需要借助 channel 通信机制或重写 embassy 运行时。
-![image](https://github.com/lighkLife/new-blog/assets/7992705/9224de8b-1bf3-40e8-986c-3738879b810f)
+1. 进程、线程、协程之间如何协作与调度？
+2. 内核态的协程完成任务之后，如何通知给用户态的协程？
+
+
+白板地址
+https://excalidraw.com/#room=b9281fc2b314f8f2a9fd,SO4c-Sl_iEDEOgmEs-i9yw
