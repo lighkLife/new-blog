@@ -26,7 +26,7 @@
 ## 第四周
 | 序号  | 任务  | 状态  | 结果  |
 | --- | --- | --- | --- |
-| 1   | 贡献调度器 | 实现中  | https://github.com/lighkLife/rCore-async/tree/ch9-async |
+| 1   | 共享调度器 | 实现中  | https://github.com/lighkLife/rCore-async/tree/ch9-async |
 | 2   | embassy 项目代码标注 | 完成 executor 模块代码注释 | https://github.com/lighkLife/embassy |
 
 遇到的问题：
